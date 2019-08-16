@@ -1,0 +1,27 @@
+<!--miniprogram/pages/admin/user/user.wxml-->
+<view class="weui-cells__title">管理员</view>
+        <view class="weui-cells weui-cells_after-title" wx:for="{{adminUser}}">
+            <view class="weui-cell" >
+                <view class="weui-cell__hd">
+                    <image src="{{item.userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.userInfo.nickName}}</view>
+                <view class="weui-cell__ft" style='display:flex'>
+                    <view class="cancel" hover-class="checkCss" data-openid="{{item.openid}}" bindtap='cancelAdmin'>取消管理员</view>
+                    <view class="delete" hover-class="checkCss" data-openid="{{item.openid}}" bindtap='deleteUser'>删除</view>
+                </view>
+            </view>
+   </view>
+   <view class="weui-cells__title">普通用户</view>
+        <view class="weui-cells weui-cells_after-title" wx:for="{{normalUser}}">
+            <view class="weui-cell" >
+                <view class="weui-cell__hd">
+                    <image src="{{item.userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.userInfo.nickName}}</view>
+                <view class="weui-cell__ft" style='display:flex'>
+                    <view class="cancel" hover-class="checkCss" data-openid="{{item.openid}}" bindtap='addAdmin'>添加管理员</view>
+                    <view class="delete" hover-class="checkCss" data-openid="{{item.openid}}" bindtap='deleteUser'>删除</view>
+                </view>
+            </view>
+   </view>

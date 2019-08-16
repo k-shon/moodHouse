@@ -1,0 +1,49 @@
+<view class="bg">
+  <view class="head">
+    <view class="headIcon">
+      <block wx:if="{{isLogin}}">
+        <image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
+      </block>
+       <block wx:else>
+        <image src="" style="width:70px;height:70px;"></image>
+      </block>
+    </view>
+    <view class="login">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <button class="button"  open-type="getUserInfo" wx:if="{{!isLogin}}" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+</view>
+
+<view class="hr"></view>
+<view class='item' hover-class='checkCss'>
+  <view class="title">我的订单</view>
+  <view class="detail2">
+    <text>></text>
+  </view>
+</view>
+<view class="line"></view>
+
+<view class="hr"></view>
+
+<view class="item" wx:if="{{isAdmin}}" hover-class='checkCss'>
+  <view class="title" bindtap='admin'>后台管理</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="line"></view>
+<view class="item"  hover-class='checkCss'>
+  <view class="title" bindtap='clearCache' >清理缓存</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="line"></view>
+<view class="item" hover-class='checkCss'>
+  <view class="title" bindtap='setting' >设置</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="hr"></view>

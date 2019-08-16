@@ -1,0 +1,18 @@
+<!--miniprogram/pages/admin/menu/editmenu/editmenu.wxml-->
+<form bindsubmit='submit'>
+     <view class="weui-cells__title">菜单名</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="name" value='{{name}}' placeholder="请输入2-6个字" />
+                </view>
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" form-type="submit">保存</button>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="warn" bindtap='delete'>删除此菜单</button>
+        </view>
+        
+</form>

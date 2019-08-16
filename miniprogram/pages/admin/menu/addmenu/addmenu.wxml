@@ -1,0 +1,14 @@
+<!--miniprogram/pages/admin/menu/addmenu/addmenu.wxml-->
+<form bindsubmit='submit'>
+     <view class="weui-cells__title">菜单名</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="name" placeholder="请输入2-6个字" />
+                </view>
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" form-type="submit">创建</button>
+        </view>
+</form>

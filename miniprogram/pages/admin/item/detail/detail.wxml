@@ -1,0 +1,45 @@
+<!--miniprogram/pages/admin/menu/item/additem/additem.wxml-->
+<form bindsubmit='submit'>
+      <view class="section" style='margin-bottom:20rpx'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{menus}}" range-key='name'>
+          <view class="picker weui-cells__title ">
+            选择菜单:<text style='margin-left:20rpx'>{{menus[index].name}}</text>
+          </view>
+          </picker>
+      </view>
+      
+      <view class="weui-cells__title weui-cell weui-cell_input">食品名称</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="name"  value='{{name}}' placeholder="请输入食品名称" />
+                </view>
+            </view>
+        </view>
+
+      <view class="weui-cells__title">单价</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="price" value='{{price}}' placeholder="请输入单价" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">图片上传</view>
+       <view class="weui-uploader__input-box" style='float:none;margin-left:20rpx'>
+            <block wx:if="{{isUpload==0}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </block>
+            <block wx:else>
+              <image class="weui-uploader__img" src='{{imgurl}}' bindtap="chooseImage"></image>
+            </block>
+        </view>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" form-type="submit">创建</button>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="warn" bindtap='delete'>删除此单品</button>
+        </view>
+</form>

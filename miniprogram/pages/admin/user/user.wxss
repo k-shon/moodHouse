@@ -1,0 +1,23 @@
+/* miniprogram/pages/admin/user/user.wxss */
+/*取消管理员*/
+.cancel{
+  margin-right:10rpx ;
+  font-size:30rpx;
+  padding:10rpx;
+  color:#ffffff;
+  background:#FF9C35;
+  border:1rpx solid #FF9C35;
+}
+/*删除用户*/
+.delete{
+  font-size:30rpx;
+  padding:10rpx;
+  color:#ffffff;
+  background:#FF9C35;
+  border:1rpx solid #FF9C35;
+}
+/*点击样式*/
+.checkCss{
+  background-color:#ccc;
+  border:1rpx solid #ccc;
+}

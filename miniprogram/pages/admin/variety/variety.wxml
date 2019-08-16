@@ -1,0 +1,21 @@
+<!--miniprogram/pages/admin/variety/variety.wxml-->
+<view wx:for="{{varietys}}" wx:for-item="variety">
+    <view class="weui-cells__title">{{variety.name}}</view>
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange">
+                <label class="weui-cell weui-check__label"  wx:for="{{variety.item}}" wx:for-item="item" wx:key="value">
+                    <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                        <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+
+                    <view class="weui-cell__bd">{{item.name}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio">
+                        <button style="width:50rpx;height:30rpx">删除</button>
+                    </view>
+                </label>
+            </radio-group>
+            <view class="weui-cell weui-cell_link">
+                <view class="weui-cell__bd" bindtap="addMore">添加更多</view>
+            </view>
+    </view>
+</view>
+<button type="primary">添加规格</button>
